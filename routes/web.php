@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BageConcatController;
+use App\Http\Controllers\OngkirController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('ongkir', OngkirController::class);
+Route::resource('bage-concat', BageConcatController::class);
